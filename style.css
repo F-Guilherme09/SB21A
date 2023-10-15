@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800;900&display=swap');
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Montserrat, Open Sans, -apple-system, Segoe UI, Roboto, 
+					Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* Styles landing */
+.landing {
+	background-image: url("./assets/landing/background.svg");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: initial;
+	height: 1000px;
+}
+.landing-content {
+	display: flex;
+	flex-direction: column;
+
+	height: 87%;
+	padding: 5rem;
+	padding-top: 12rem;
+	align-items: center;
+	background-color: #0bb990;
+}
+.landing-title {
+	gap: 2rem;
+	display: flex;
+	color: #FEFEFE;
+	max-width: 1440px;
+}
+.landing-title .info {
+	font-size: 20px;
+	font-weight: 400;
+}
+.landing-title .title {
+	font-family: Open Sans;
+	font-size: 60px;
+	font-weight: 800;
+	line-height: 105.7%;
+	justify-content: center;
+}
+.landing-title button {
+	width: 300px;
+	height: 70px;
+	border-radius: 20px;
+	background: #FEFEFE;
+	font-size: 32px;
+	font-weight: 900;
+	border: none;
+}
+.landing-title p {
+	margin: 0;
+}
+.landing-title span:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+	max-width: 700px;
+	gap: 2rem;
+}
+.landing-title .images-container::before {
+	content: url("./assets/landing/hat.svg");
+	position: absolute;
+	transform: translateY(-45px);
+}
+.landing-title .images-container span:nth-child(2):before {
+	content: url("./assets/landing/hat.svg");
+	position: absolute;
+	transform: translate(350px, -40px) rotate(45deg);
+}
+.landing-title .images-container span:nth-child(2):after {
+	content: url("./assets/landing/plus.svg");
+	position: absolute;
+	transform: translate(350px, -400px) rotate(45deg);
+}
+.landing-title .images-container::after {
+	content: url("./assets/landing/plus.svg");
+	position: absolute;
+	transform: translateY(-30px);
+}
+.landing-title .images-container {
+	position: relative;
+}
+.landing-title span.images {
+	width: 400px;
+	height: 400px;
+	background-color: #FFF;
+	border-radius: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.landing-title .images-container .images img {
+	position: absolute;
+	height: 400px;
+	right: 0;
+}
+.landing-title .images-container > img {
+	position: absolute;
+	top: 9px;
+	right: -68px;
+	height: 285px;
+}
+
+.landing-infos {
+	padding-top: 10rem;
+	margin-top: auto;
+	display: flex;
+	width: 100%;
+	gap: 5em;
+	max-width: 1440px;
+	justify-content: center;
+}
+.landing-infos div {
+	width: 300px;
+	gap: 20px;
+	padding: 24px;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 24px;
+	background: #FEFEFE;
+	box-shadow: -4px -1px 37px 0px rgba(0, 0, 0, 0.25);
+}
+.landing-infos div p {
+	font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+	.landing-infos {
+		padding-top: 1rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.landing-content {
+		padding: 20px;
+	}
+	.landing-title .images-container {
+		display: none;
+	}
+	.landing-infos {
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.landing {
+		height: auto;
+	}
+	.landing-infos {
+		flex-wrap: wrap;
+	}
+}
+
+/* Styles Daniel */
+
+.person-btn { 
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-top: auto;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #00b377;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.person-image {
+  width: 100%
+}
+
+.person-image img {
+  width: 25rem;
+  height: 40rem;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #00b377;
+}
+
+.info-card {
+  background-color: #EFF4F2;
+  padding: 5rem;
+  margin: auto;
+  gap: 3rem;
+  max-width: 900px;
+  max-height: 900px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flex-column p {
+  font-size: 1rem;
+}
+
+.ribbon {
+  background-color: #00b377;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 0;
+  gap: 1rem;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.ribbon img {
+  width: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.cards {
+  gap: 2rem;
+}
+
+.remove-p-top {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+@media (max-width: 700px) {
+	.person-image img {
+		display: none;
+	}
+	.flex.cards {
+		flex-wrap: wrap;
+	}
+	.flex-column.info-card {
+		height: auto;
+	}
+}
